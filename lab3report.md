@@ -2,7 +2,7 @@
 The bug I'm choosing for this lab report is the return line for the ```reversed``` method in the file ```ArrayExamples.java```.
 (But to make this method bug-free, the line for copying the array elements into new array has a bug to be fixed too)
 
-## A failurre inducing input:
+## A failure inducing input:
 ```
 @Test
   public void testReversed2() {
