@@ -2583,4 +2583,34 @@ technical/biomed/1471-213X-1-11.txt
 technical/biomed/1472-684X-1-5.txt
 technical/biomed/1476-4598-1-6.txt
 ```
-Explanation: This commands prints out all files in the specified path and restricts to a type which I have 
+Explanation: This command prints out all files in the specified path and restricts to a type which I have specfied as ```-f```
+meaning a file type (so excluding directories). This is useful so we can be even more specific with what we're looking for, 
+either a file or a directory only in the given path. 
+Source: https://youtu.be/skTiK_6DdqU?si=EcNMj2E05tnp9AJF&t=505
+
+## Option 3:
+```
+find <director> -iname <filename>
+```
+Example 1:
+```
+arinas-air:docsearch arinaxing$ find technical/ -name BIOMED
+//compared with
+arinas-air:docsearch arinaxing$ find technical/ -iname BIOMED
+
+```
+output: 
+```
+//no output
+//compared with
+technical//biomed
+```
+Example 2:
+```
+arinas-air:docsearch arinaxing$ find technical/ -iname BCr567.txt
+```
+output: 
+```
+technical//biomed/bcr567.txt
+```
+Explanation: This command adds ```i``` in front of ```name``` which makes the ```find``` function case-INsensitive
